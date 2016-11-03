@@ -14,7 +14,7 @@ function keyUp(event){
   calculateNumericOutput();
 }
 
-function claculateNumericOutput(){
+function calculateNumericOutput(){
   student.name = document.getElementById('name').value;
 
   var totalNameValue = 0;
