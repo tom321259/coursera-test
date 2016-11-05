@@ -1,29 +1,16 @@
-var student = {
-  name: "",
-  type: "student"
 
-};
+(function()
+{
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', contentLoaded);
+  angular.module('myFirstApp', [])
 
-function contentLoaded(event){
-  document.getElementById('name').addEventListener("keyup", keyUp);
-}
-
-function keyUp(event){
-  calculateNumericOutput();
-}
-
-function calculateNumericOutput(){
-  student.name = document.getElementById('name').value;
-
-  var totalNameValue = 0;
-  for (var i = 0; i < student.name.length; i++)
+  .controller('myFirstController', function($scope)
   {
-    totalNameValue += student.name.charCodeAt(i);
-  }
+    $scope.name = "Tom";
+    $scope.sayHello = function() {
+      return "Hello Tom dfgdfgddf!";
+    }
+  })
 
-  //Insert result into page
-  var output = "Total numeric value of person´s name is: " + totalNameValue;
-  document.getElementById('output').innerText = output;
-}
+})();
